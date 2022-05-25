@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post">
+        <h2 for="title">タイトル:{{post.title}}</h2>
+        <h2 for="body">内容</h2>
+        <p>{{post.body}}</p>
+
+    </form>
+    <a href="/{{post.id}}/update" role="button">編集</a>
+    <a href="/{{post.id}}/delete" role="button">削除</a>
+    <a href= "{{url_for('index')}}">戻る</a>
+{% endblock %}
